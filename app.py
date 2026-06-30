@@ -13,7 +13,7 @@ load_dotenv()
 # Cache document loading and embedding
 @st.cache_resource
 def load_data_and_create_vectorstore():
-    loader = DirectoryLoader("data", glob="*.pdf", loader_cls=PyPDFLoader)
+    loader = DirectoryLoader("Data", glob="*.pdf", loader_cls=PyPDFLoader)
     docs = loader.load()
     splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
     chunks = splitter.split_documents(docs)
