@@ -26,7 +26,8 @@ def load_and_prepare():
     return vectorstore
 
 vectorstore = load_and_prepare()
-retriever = vectorstore.as_retriever(search_kwargs={"k": 3})st.sidebar.title("Model Settings")
+retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
+st.sidebar.title("Model Settings")
 model_name = "llama-3.3-70b-versatile"
 temperature = st.sidebar.slider("Temperature", 0.0, 1.0, 0.0)
 st.sidebar.write(f"Model: {model_name}")st.title("RAG Chatbot")
