@@ -5,3 +5,9 @@ langchain-huggingface
 langchain-groq
 python-dotenv
 sentence-transformers
+python-dotenv
+transformers
+torch
+torchvision
+torchaudio
+pypdf
