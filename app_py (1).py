@@ -30,7 +30,8 @@ retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
 st.sidebar.title("Model Settings")
 model_name = "llama-3.3-70b-versatile"
 temperature = st.sidebar.slider("Temperature", 0.0, 1.0, 0.0)
-st.sidebar.write(f"Model: {model_name}")st.title("RAG Chatbot")
+st.sidebar.write(f"Model: {model_name}")
+st.title("RAG Chatbot")
 user_question = st.text_input("Ask a sales-related question:")
 if st.button("Get Answer"):
     if user_question:
